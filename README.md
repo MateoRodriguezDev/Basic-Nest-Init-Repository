@@ -19,9 +19,9 @@
 
 ## 📖 Descripción
 
-**Basic Nest Init Repository** es una plantilla de inicio rápido para proyectos de backend construida con **NestJS**. Incluye autenticación completa con JWT, manejo de usuarios, documentación automática con Swagger, y una estructura sólida lista para escalar.
+**Basic Nest Init Repository** es una plantilla de **NestJS**. Tiene autenticación completa con JWT, manejo de usuarios, documentación automática con Swagger, y una estructura sólida lista para escalar.
 
-Ideal para clonar y usar como base cada vez que necesites arrancar un nuevo proyecto de backend sin perder tiempo configurando desde cero.
+La idea es utilizar esto cada vez que quiera levantar en un proyecto simple en un futuro.
 
 ---
 
@@ -103,7 +103,7 @@ DATABASE_URL="mysql://usuario:contraseña@localhost:3306/nombre_db"
 PORT=3000
 
 # 🪙 Secret para JWT
-TOKEN="tu_secret_jwt_super_seguro"
+TOKEN="jwt_super_seguro"
 ```
 
 ### 🔥 Variables opcionales — Módulo Firebase
@@ -116,8 +116,6 @@ FIREBASE_SERVICE_ACCOUNT_KEY=''
 FIREBASE_STORAGE_BUCKET=''
 ```
 
-> ⚠️ **Importante:** Nunca subas el archivo `.env` a tu repositorio. Está incluido en el `.gitignore` por defecto.
-
 ---
 
 ## 📦 Módulos incluidos
@@ -127,8 +125,8 @@ Maneja el registro e inicio de sesión de usuarios mediante username y contrase�
 
 | Endpoint | Método | Descripción |
 |---|---|---|
-| `/auth/register` | `POST` | Registro de nuevo usuario |
-| `/auth/login` | `POST` | Login y obtención de token JWT |
+| `api/v1/auth/register` | `POST` | Registro de nuevo usuario |
+| `api/v1/auth/login` | `POST` | Login y obtención de token JWT |
 
 ### 👤 Users Module
 Gestión de usuarios con soporte para control de acceso por roles mediante Guards y Decoradores personalizados.
@@ -142,7 +140,7 @@ Módulo preconfigurado listo para ser extendido. Actualmente preparado para sopo
 
 ## 📄 Documentación API
 
-La documentación interactiva generada con **Swagger** está disponible una vez que el servidor esté corriendo:
+La documentación generada con **Swagger** está disponible una vez que el servidor esté corriendo:
 
 ```
 http://localhost:{PORT}/api
